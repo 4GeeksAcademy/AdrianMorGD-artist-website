@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Metadatos base del documento -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Titulo y descripcion SEO de la landing -->
+    <title>Mauricio Rivera-Ken Jutsu</title>
+    <meta
+      name="description"
+      content="Landing page de artista enfocado en Kenjutsu con 10 anios de experienca."
+    />
+
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Hero principal con ancla para la seccion Acerca de mi -->
+    <header class="hero" id="acerca">
+      <!-- Navegacion principal del sitio -->
+      <nav class="nav" aria-label="Menu principal">
+        <ul class="nav__list">
+          <!-- Enlaces internos hacia las secciones de la pagina -->
+          <li><a href="#acerca">Acerca de mi</a></li>
+          <li><a href="#clases">Clases</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nombre del artista -->
+      <h1>Mauricio Rivera</h1>
+
+      <!-- Descripcion breve del artista -->  
+      <p class="hero__description">
+        Artista especializado en Kenjutsu con una decada de experiencia, dedicado a la perfeccion de la tecnica y la disciplina tradicional del sable japones.
+      </p>
+    </header>
+
+    <!-- Seccion principal con filosofia del Kenjutsu -->
+    <main>
+      <section class="philosophy" id="clases" aria-labelledby="filosofia-title">
+        <h2 id="filosofia-title">Filosofia</h2>
+
+        <!-- Tres paneles que muestran fragmentos de una sola imagen de katana -->
+        <div class="katana-strip" role="img" aria-label="Katana dividida en tres paneles">
+          <div class="katana-strip__slice katana-strip__slice--1"></div>
+          <div class="katana-strip__slice katana-strip__slice--2"></div>
+          <div class="katana-strip__slice katana-strip__slice--3"></div>
+        </div>
+
+        <p>
+          El kenjutsu es la disciplina tradicional del sable japones: cultiva tecnica,
+          presencia mental y respeto, buscando que cada movimiento sea preciso,
+          consciente y en armonia con el oponente.
+        </p>
+      </section>
+
+      <!-- Seccion de galeria con carrusel de clases en dojo -->
+      <section class="gallery" aria-labelledby="galeria-title">
+        <h2 id="galeria-title">Galeria</h2>
+
+        <!-- Carrusel con controles de navegacion lateral -->
+        <div class="carousel" aria-roledescription="carrusel" aria-label="Galeria de clases de kenjutsu">
+          <button class="carousel__control carousel__control--prev" type="button" aria-label="Imagen anterior">
+            &#10094;
+          </button>
+
+          <div class="carousel__viewport">
+            <ul class="carousel__track">
+              <!-- Cada slide representa una clase en el dojo -->
+              <li class="carousel__slide is-active">
+                <img
+                  src="https://plus.unsplash.com/premium_photo-1713170701344-41076b018b59?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Practica de kenjutsu en pareja dentro del dojo"
+                  loading="eager"
+                />
+              </li>
+              <li class="carousel__slide">
+                <img
+                  src="https://images.unsplash.com/photo-1512928735464-5cc10b1eb091?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Sesion grupal de entrenamiento con bokken"
+                  loading="lazy"
+                />
+              </li>
+              <li class="carousel__slide">
+                <img
+                  src="https://images.unsplash.com/photo-1652584379408-55fbad7bcfb0?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Instructor mostrando una tecnica de guardia"
+                  loading="lazy"
+                />
+              </li>
+              <li class="carousel__slide">
+                <img
+                  src="https://images.unsplash.com/photo-1512427469422-a87e519cabd5?q=80&w=1720&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Clase de desplazamiento y postura en el tatami"
+                  loading="lazy"
+                />
+              </li>
+              <li class="carousel__slide">
+                <img
+                  src="https://images.unsplash.com/photo-1763905720991-0ce68f551743?q=80&w=1732&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Grupo de alumnos finalizando practica de kenjutsu"
+                  loading="lazy"
+                />
+              </li>
+            </ul>
+          </div>
+
+          <button class="carousel__control carousel__control--next" type="button" aria-label="Imagen siguiente">
+            &#10095;
+          </button>
+        </div>
+
+        <!-- Paginador circular para seleccionar imagen -->
+        <div class="carousel__pagination" role="tablist" aria-label="Selector de imagenes de la galeria">
+          <button class="carousel__dot is-active" type="button" role="tab" aria-label="Ir a imagen 1" aria-selected="true"></button>
+          <button class="carousel__dot" type="button" role="tab" aria-label="Ir a imagen 2" aria-selected="false"></button>
+          <button class="carousel__dot" type="button" role="tab" aria-label="Ir a imagen 3" aria-selected="false"></button>
+          <button class="carousel__dot" type="button" role="tab" aria-label="Ir a imagen 4" aria-selected="false"></button>
+          <button class="carousel__dot" type="button" role="tab" aria-label="Ir a imagen 5" aria-selected="false"></button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Script principal para interacciones del carrusel -->
+    <script src="script.js" defer></script>
+  </body>
+</html>

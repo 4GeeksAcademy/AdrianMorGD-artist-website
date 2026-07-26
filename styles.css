@@ -1,0 +1,307 @@
+/* Variables de color globales del tema visual */
+:root {
+  --ink: #1f1b17;
+  --paper: #f4ebde;
+  --paper-2: #e6d7c0;
+  --accent: #9a2218;
+  --shadow-soft: 0 8px 20px rgb(31 27 23 / 10%);
+}
+
+/* Reset basico para normalizar box model y espaciado */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos base del documento */
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at top right, #f7f1e9, #eadfcf 45%, #e3d3bd);
+  line-height: 1.5;
+  scroll-padding-top: 5rem;
+}
+
+/* Contenedor principal del hero */
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+  padding: 5.2rem 0 1.6rem;
+}
+
+/* Titulo principal dentro del hero */
+.hero h1 {
+  font-size: clamp(1.5rem, 7vw, 2.3rem);
+  margin-bottom: 0;
+  text-align: center;
+}
+
+/* Envoltura visual de la barra de navegacion */
+.nav {
+  position: fixed;
+  top: 0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1100px, 92vw);
+  z-index: 1000;
+  border: 1px solid rgb(31 27 23 / 20%);
+  border-radius: 999px;
+  background: rgb(244 235 222 / 88%);
+  backdrop-filter: blur(6px);
+}
+
+/* Lista horizontal de enlaces del menu */
+.nav__list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+  padding: 0.45rem;
+}
+
+/* Estilo de cada enlace de navegacion */
+.nav__list a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--ink);
+  font-size: 0.92rem;
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+}
+
+/* Estados interactivos de hover y foco accesible */
+.nav__list a:hover,
+.nav__list a:focus-visible {
+  background: var(--paper-2);
+  color: var(--accent);
+  outline: none;
+}
+
+/* Seccion de filosofia (main) */
+.philosophy {
+  width: min(1100px, 92vw);
+  margin: 1rem auto 2.2rem;
+  padding: 1.15rem;
+  border: 1px solid rgb(31 27 23 / 18%);
+  border-radius: 18px;
+  background: linear-gradient(160deg, rgb(244 235 222 / 92%), rgb(230 215 192 / 78%));
+}
+
+/* Titulo de la seccion filosofia */
+.philosophy h2 {
+  text-align: center;
+  font-size: clamp(1.25rem, 6.2vw, 2rem);
+  margin-bottom: 0.95rem;
+}
+
+/* Rejilla de tres paneles para fragmentar una sola imagen */
+.katana-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+/* Panel individual con mascara cuadrada y fondo compartido */
+.katana-strip__slice {
+  min-height: clamp(120px, 26vw, 260px);
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  border: 0;
+  box-shadow: none;
+  background-image: url("https://images.unsplash.com/photo-1711725637816-b0755c582c86?q=80&w=1333&auto=format&fit=crop");
+  background-repeat: no-repeat;
+  background-size: 300% 100%;
+}
+
+/* Primer tercio de la imagen */
+.katana-strip__slice--1 {
+  background-position: 0% 50%;
+}
+
+/* Segundo tercio de la imagen */
+.katana-strip__slice--2 {
+  background-position: 50% 50%;
+}
+
+/* Tercer tercio de la imagen */
+.katana-strip__slice--3 {
+  background-position: 100% 50%;
+}
+
+/* Texto descriptivo de la filosofia */
+.philosophy p {
+  font-size: 0.98rem;
+  max-width: 65ch;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Contenedor principal de la seccion de galeria */
+.gallery {
+  width: min(1100px, 92vw);
+  margin: 0 auto 2.4rem;
+  padding: 1.15rem;
+  border: 1px solid rgb(31 27 23 / 18%);
+  border-radius: 18px;
+  background: linear-gradient(150deg, rgb(244 235 222 / 94%), rgb(230 215 192 / 70%));
+}
+
+/* Encabezado de la galeria */
+.gallery h2 {
+  text-align: center;
+  font-size: clamp(1.25rem, 6.2vw, 2rem);
+  margin-bottom: 0.95rem;
+}
+
+/* Estructura base del carrusel */
+.carousel {
+  position: relative;
+  border-radius: 14px;
+}
+
+/* Ventana visible del carrusel */
+.carousel__viewport {
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid rgb(31 27 23 / 20%);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Pista horizontal que se desplaza entre slides */
+.carousel__track {
+  list-style: none;
+  display: flex;
+  transform: translateX(0%);
+  transition: transform 320ms ease;
+}
+
+/* Cada slide ocupa todo el ancho visible */
+.carousel__slide {
+  min-width: 100%;
+}
+
+/* Tratamiento visual de imagen dentro de cada slide */
+.carousel__slide img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+/* Botones flotantes para avanzar y retroceder */
+.carousel__control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 999px;
+  background: rgb(244 235 222 / 92%);
+  color: var(--ink);
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+}
+
+/* Boton izquierdo de navegacion */
+.carousel__control--prev {
+  left: 0.55rem;
+}
+
+/* Boton derecho de navegacion */
+.carousel__control--next {
+  right: 0.55rem;
+}
+
+/* Estado de interaccion para controles del carrusel */
+.carousel__control:hover,
+.carousel__control:focus-visible {
+  background: var(--paper-2);
+  color: var(--accent);
+  outline: none;
+}
+
+/* Puntos inferiores para paginacion */
+.carousel__pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.45rem;
+  margin-top: 0.9rem;
+}
+
+.carousel__dot {
+  width: 0.72rem;
+  height: 0.72rem;
+  border-radius: 999px;
+  border: 1px solid rgb(31 27 23 / 25%);
+  background: rgb(31 27 23 / 18%);
+  cursor: pointer;
+}
+
+.carousel__dot.is-active {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.carousel__dot:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Ajustes responsivos para pantallas medianas y grandes */
+@media (min-width: 768px) {
+  /* Mayor compensacion superior por el menu fijo */
+  .hero {
+    padding-top: 5.8rem;
+  }
+
+  /* Ajuste de espaciado horizontal del menu en desktop */
+  .nav__list {
+    gap: 0.55rem;
+  }
+
+  /* Botones del menu con mayor area tactil */
+  .nav__list a {
+    font-size: 1rem;
+    padding: 0.5rem 0.9rem;
+  }
+
+  /* Filosofia con mayor aire visual en pantallas grandes */
+  .philosophy {
+    margin-top: 1.4rem;
+    padding: 1.6rem;
+  }
+
+  /* Separacion mas marcada entre paneles de la katana */
+  .katana-strip {
+    gap: 0.8rem;
+  }
+
+  /* Altura minima mayor para preservar detalle de imagen */
+  .katana-strip__slice {
+    min-height: clamp(170px, 20vw, 280px);
+  }
+
+  /* Galeria con padding ampliado para desktop */
+  .gallery {
+    padding: 1.6rem;
+  }
+
+  /* Controles del carrusel mas grandes en desktop */
+  .carousel__control {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
