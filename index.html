@@ -12,6 +12,46 @@
       content="Landing page de artista enfocado en Kenjutsu con 10 anios de experienca."
     />
 
+    <!-- Datos estructurados para GEO/SEO (Schema.org) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "#website",
+            "name": "Mauricio Rivera - Ken Jutsu",
+            "inLanguage": "es",
+            "description": "Sitio oficial de Mauricio Rivera, artista especializado en Kenjutsu."
+          },
+          {
+            "@type": "Person",
+            "@id": "#mauricio-rivera",
+            "name": "Mauricio Rivera",
+            "jobTitle": "Artista e instructor de Kenjutsu",
+            "description": "Artista especializado en Kenjutsu con una decada de experiencia en tecnica, disciplina y tradicion del sable japones.",
+            "knowsAbout": ["Kenjutsu", "Tecnica de sable japones", "Disciplina marcial tradicional"],
+            "worksFor": {
+              "@id": "#website"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "#webpage",
+            "name": "Mauricio Rivera - Ken Jutsu",
+            "isPartOf": {
+              "@id": "#website"
+            },
+            "about": {
+              "@id": "#mauricio-rivera"
+            },
+            "inLanguage": "es",
+            "description": "Landing con informacion, filosofia y galeria de clases de Kenjutsu de Mauricio Rivera."
+          }
+        ]
+      }
+    </script>
+
     <!-- Hoja de estilos principal -->
     <link rel="stylesheet" href="styles.css" />
   </head>
