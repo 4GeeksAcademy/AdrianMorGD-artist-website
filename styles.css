@@ -260,6 +260,24 @@ body {
   outline-offset: 2px;
 }
 
+/* Pie de pagina con cierre visual del contenido */
+.site-footer {
+  width: min(1100px, 92vw);
+  margin: 0 auto 1.6rem;
+  padding: 1rem;
+  border: 1px solid rgb(31 27 23 / 18%);
+  border-radius: 14px;
+  background: linear-gradient(165deg, rgb(230 215 192 / 90%), rgb(244 235 222 / 82%));
+  text-align: center;
+}
+
+/* Texto principal del footer */
+.site-footer h3 {
+  font-size: clamp(1rem, 4.8vw, 1.25rem);
+  font-weight: 600;
+  color: var(--ink);
+}
+
 /* Ajustes responsivos para pantallas medianas y grandes */
 @media (min-width: 768px) {
   /* Mayor compensacion superior por el menu fijo */
@@ -297,6 +315,12 @@ body {
   /* Galeria con padding ampliado para desktop */
   .gallery {
     padding: 1.6rem;
+  }
+
+  /* Footer con mayor respiracion vertical en desktop */
+  .site-footer {
+    padding: 1.15rem;
+    margin-bottom: 2rem;
   }
 
   /* Controles del carrusel mas grandes en desktop */
