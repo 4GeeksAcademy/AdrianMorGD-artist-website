@@ -41,7 +41,13 @@
  - Un paginador de circulo para controlar las imagenes
  - Dos botones sobre el carusel para ir a la siguiente o anterior imagen
 
+
+ ## Seccion Contaco
+ - h2 con texto Contacto
+ - h3 con texto Numero de telefono: xx xxx xxx
+ - h3 con texto Email: artista@gmail.com
+
 ## Footer
 
-- un h3 que diga todos los derechos reservados
+- un h4 que diga todos los derechos reservados
 

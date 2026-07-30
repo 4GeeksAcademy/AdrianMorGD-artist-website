@@ -270,6 +270,36 @@ body {
   outline-offset: 2px;
 }
 
+/* Seccion de contacto con datos del artista */
+.contact {
+  width: min(1100px, 92vw);
+  margin: 0 auto 2.2rem;
+  padding: 1.15rem;
+  border: 1px solid rgb(31 27 23 / 18%);
+  border-radius: 18px;
+  overflow: hidden;
+  background: linear-gradient(150deg, rgb(244 235 222 / 94%), rgb(230 215 192 / 70%));
+  text-align: center;
+}
+
+/* Titulo de la seccion de contacto */
+.contact__title {
+  text-align: center;
+  font-size: clamp(1.25rem, 6.2vw, 2rem);
+  margin-bottom: 0.8rem;
+}
+
+/* Lineas de informacion de contacto */
+.contact__item {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.contact__item + .contact__item {
+  margin-top: 0.45rem;
+}
+
 /* Pie de pagina con cierre visual del contenido */
 .site-footer {
   width: min(1100px, 92vw);
@@ -282,7 +312,7 @@ body {
 }
 
 /* Texto principal del footer */
-.site-footer h3 {
+.site-footer h4 {
   font-size: clamp(1rem, 4.8vw, 1.25rem);
   font-weight: 600;
   color: var(--ink);
@@ -324,6 +354,11 @@ body {
 
   /* Galeria con padding ampliado para desktop */
   .gallery {
+    padding: 1.6rem;
+  }
+
+  /* Contacto con padding ampliado para desktop */
+  .contact {
     padding: 1.6rem;
   }
 
