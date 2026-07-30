@@ -41,6 +41,14 @@ body {
   text-align: center;
 }
 
+
+.hero__description {
+  text-align: center;
+  font-size:0.8rem;
+  max-width: 60ch;
+  margin: 0 auto;
+}
+
 /* Envoltura visual de la barra de navegacion */
 .nav {
   position: fixed;
@@ -112,7 +120,9 @@ body {
 
 /* Panel individual con mascara cuadrada y fondo compartido */
 .katana-strip__slice {
-  min-height: clamp(120px, 26vw, 260px);
+  min-height: 0;
+  min-width: 0;
+  width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 10px;
   border: 0;
@@ -138,8 +148,8 @@ body {
 }
 
 /* Texto descriptivo de la filosofia */
-.philosophy p {
-  font-size: 0.98rem;
+.philosophy__description {
+  font-size: 0.8rem;
   max-width: 65ch;
   margin: 0 auto;
   text-align: center;
